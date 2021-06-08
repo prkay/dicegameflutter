@@ -1,0 +1,18 @@
+{
+  "loginWithAccount": "Login",
+  "registerNewAccount": "Create New Account",
+  "usernameTextFieldLabelText": "Email",
+  "passwordTextFieldLabelText": "Password",
+  "errorRegistrationFirstNameEmpty": "Please enter your First Name.",
+  "errorRegistrationFirstNameRange": "Invalid first name. It can consist of 2 up to 15 characters.",
+  "errorRegistrationFirstNameSpecChar": "First Name may only consist of letters or hyphen between the letter.",
+  "passwordTooLong": "The password is too long.",
+  "errorPasswordIsEmpty": "Valid Password is required.",
+  "inValidEmailError": "Please enter a valid email address.",
+  "errorUsernameEmpty": "Valid Username is required.",
+  "usernameShouldBeAValidEmail": "Valid Username is required.",
+  "errorUserStartsLetter": "Username needs to start with a letter.",
+  "alreadyHaveAccountLogin": "Already have account. Login",
+  "register": "Register",
+  "firstName": "First Name"
+}
