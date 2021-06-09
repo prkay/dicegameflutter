@@ -1,14 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/features/home/presentation/pages/home_page.dart';
 import 'package:flutter_app/features/login/presentation/pages/login_page.dart';
+import 'package:flutter_app/features/register/model/registration_request_model.dart';
 import 'package:flutter_app/localization/app_localization.dart';
 import 'package:flutter_app/resources/dice_game_colors.dart';
 import 'package:flutter_app/resources/styles/text_styles.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 class DiceGameApp extends StatelessWidget {
-
-  const DiceGameApp({Key key,}) : super(key: key);
+  final UserModel userModel;
+  const DiceGameApp({Key key,this.userModel}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -44,7 +46,7 @@ class DiceGameApp extends StatelessWidget {
         }
         return supportedLocales.first;
       },
-      home: AppLoginPage(),
+      home: userModel != null ? HomePage() :AppLoginPage(),
     );
   }
 }

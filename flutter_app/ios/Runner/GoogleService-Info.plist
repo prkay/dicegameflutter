@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>862149452571-adhu07bcsu5f6rnbkrjgvh4opj7d9l10.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.862149452571-adhu07bcsu5f6rnbkrjgvh4opj7d9l10</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBm6AxqZ0mOd2ao0AdpBVY6H-2ts-Dn2x8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>862149452571</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mobileapp.dicegame</string>
+	<key>PROJECT_ID</key>
+	<string>dicegameflutter</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dicegameflutter.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:862149452571:ios:bd28c66ace48b973c329be</string>
+</dict>
+</plist>

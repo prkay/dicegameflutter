@@ -15,4 +15,14 @@ class StringKeys{
   static const firstName = "firstName";
   static const register = "register";
   static const alreadyHaveAccountLogin = "alreadyHaveAccountLogin";
+  static const userCreated = "userCreated";
+  static const userAlreadyExist = "userAlreadyExist";
+  static const somethingWentWrong = "somethingWentWrong";
+  static const inValidCredentials = "inValidCredentials";
+  static const logut = "logut";
+  static const rolldice = "rolldice";
+  static const leaderboard = "leaderboard";
+  static const gamesPlayed = "gamesPlayed";
+  static const totalScore = "totalScore";
+  static const scoreUpdated = "scoreUpdated";
 }

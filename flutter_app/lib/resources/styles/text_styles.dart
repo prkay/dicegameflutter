@@ -59,5 +59,12 @@ abstract class TextStyles {
     height: 1.50,
     letterSpacing: 0.2,
   );
+  static const primaryBodyTextStyle = TextStyle(
+    color: DiceGameAppColors.bodyTextPrimaryColor,
+    fontWeight: FontWeight.normal,
+    fontSize: 18.0,
+    height: 1.2,
+    letterSpacing: 0.0,
+  );
 
 }

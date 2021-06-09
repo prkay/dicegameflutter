@@ -12,4 +12,6 @@ class DiceGameAppColors {
   static const primaryInputFieldLabelColor = Color(0xff42697c);
   static const boxUpperShadowColor = Color.fromRGBO(255, 255, 255, 0.66);
   static const boxLowerShadowColor = Color.fromRGBO(124, 135, 157, 0.24);
+  static const white = Color(0xffffffff);
+  static const bodyTextPrimaryColor = Color(0xff464646);
 }

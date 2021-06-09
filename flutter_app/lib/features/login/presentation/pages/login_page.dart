@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app/core/validations/form_validations.dart';
+import 'package:flutter_app/features/home/presentation/pages/home_page.dart';
+import 'package:flutter_app/features/login/model/login_request_model.dart';
 import 'package:flutter_app/features/login/presentation/bloc/bloc.dart';
 import 'package:flutter_app/features/register/presentation/pages/registration_page.dart';
 import 'package:flutter_app/injection/injection_container.dart';
@@ -13,6 +15,7 @@ import 'package:flutter_app/resources/widgets/default_button.dart';
 import 'package:flutter_app/resources/widgets/hyperlink_widget.dart';
 import 'package:flutter_app/resources/widgets/input_field_widget.dart';
 import 'package:flutter_app/resources/widgets/progress_loader_widget.dart';
+import 'package:flutter_app/resources/widgets/snack_bar_message.dart';
 import 'package:flutter_app/resources/widgets/textfield_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,6 +27,7 @@ class AppLoginPage extends StatefulWidget {
 }
 
 class _AppLoginPageState extends State<AppLoginPage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   bool landingDone = false;
   LoginBloc _loginBloc;
   var _landingDone = false;
@@ -64,12 +68,23 @@ class _AppLoginPageState extends State<AppLoginPage> {
           print(state.landingDone);
           print(state.isLoading);
           _landingDone = state.landingDone;
+        }else if(state is UserLoginSuccessState){
+          if(state.message == StringKeys.userAlreadyExist){
+            Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (c) => HomePage()), (route) => false);
+          }else{
+            SnackBarMessageWidget(state.message,_scaffoldKey).buildSnackBar();
+          }
+        }else if(state is UserLoginFailedState){
+          SnackBarMessageWidget(state.errorMessageKey,_scaffoldKey).buildSnackBar();
         }
       },
       builder: (context, state) {
         return Scaffold(
               resizeToAvoidBottomInset: false,
-              body: Stack(children: <Widget>[
+              body: Stack(
+                key: _scaffoldKey,
+                  children: <Widget>[
                 GestureDetector(
                   onTap: () => _clearAllFocus(),
                   child: ProgressHUD(
@@ -100,7 +115,6 @@ class _AppLoginPageState extends State<AppLoginPage> {
         onPressed: () {
           _clearAllFocus();
           validateAndSave();
-          // toDo perform login function here
         },
       ),
     );
@@ -111,12 +125,8 @@ class _AppLoginPageState extends State<AppLoginPage> {
       label: translate(context, StringKeys.registerNewAccount),
       onPressed: () async {
         _clearAllFocus();
-        await Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => RegisterationPage(),
-          ),
-        );
+        Navigator.of(context).pushAndRemoveUntil(
+            MaterialPageRoute(builder: (c) => RegisterationPage()), (route) => false);
         formKey.currentState.reset();
       },
     );
@@ -194,6 +204,11 @@ class _AppLoginPageState extends State<AppLoginPage> {
 
     if (form.validate()) {
       form.save();
+      LoginRequest  loginRequest = LoginRequest(
+        email: userNameController.text,
+        password: passwordController.text,
+      );
+      _loginBloc.add(LoginUserStart(loginRequest));
     }
   }
 

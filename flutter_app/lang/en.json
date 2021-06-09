@@ -1,6 +1,6 @@
 {
   "loginWithAccount": "Login",
-  "registerNewAccount": "Create New Account",
+  "registerNewAccount": "Create an account",
   "usernameTextFieldLabelText": "Email",
   "passwordTextFieldLabelText": "Password",
   "errorRegistrationFirstNameEmpty": "Please enter your First Name.",
@@ -12,7 +12,17 @@
   "errorUsernameEmpty": "Valid Username is required.",
   "usernameShouldBeAValidEmail": "Valid Username is required.",
   "errorUserStartsLetter": "Username needs to start with a letter.",
-  "alreadyHaveAccountLogin": "Already have account. Login",
+  "alreadyHaveAccountLogin": "Already have an account. Login",
   "register": "Register",
-  "firstName": "First Name"
+  "firstName": "First Name",
+  "userCreated": "User registered successfully.",
+  "userAlreadyExist": "User already exist.",
+  "somethingWentWrong": "Something went wrong. Please try again later.",
+  "inValidCredentials": "Incorrect email or password.",
+  "logut": "Logout",
+  "rolldice": "Roll Dice",
+  "leaderboard": "View Leader Board",
+  "gamesPlayed": "Games Played",
+  "totalScore": "Total Score",
+  "scoreUpdated": "Score update successfully"
 }
