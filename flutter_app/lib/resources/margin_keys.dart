@@ -10,6 +10,8 @@ class MarginKeys {
   static const double inputFieldLabelLeftRightMargin = 23;
   static const double inputFieldLabelTopMargin = 20;
   static const double inputFieldLabelBottomMargin = 15;
+  static const double commonMargin = 16;
+  static const double homeIconOptionsMargin = 25;
 }
 
 class BorderSideKeys {
@@ -28,4 +30,7 @@ class OffsetsKey {
 
 class DimensionKeys{
   static const double heightOfInputFieldSeparator = 2;
+  static const double messageIconHeight = 50;
+  static const double arrowHeight = 25;
+  static const double diceImageSize = 150;
 }

@@ -36,6 +36,10 @@ dependencies:
   basic_utils: ^2.5.7
   validators: ^2.0.1
   shared_preferences: ^0.5.10
+  firebase_database: ^4.4.0
+  firebase_core: ^0.5.3
+  cloud_firestore: any
+  package_info: ^0.4.3+4
 
 dev_dependencies:
   flutter_test:
